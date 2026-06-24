@@ -1,0 +1,31 @@
+# Ignore VS Code workspace file
+My_Portfolio_Website.code-workspace
+
+# Ignore VS Code settings and history
+.vscode/
+.history/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build and cache directories
+node_modules/
+dist/
+build/
+.cache/
+public/
+.hugo_build.lock
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore Windows alternate data streams
+*.Zone.Identifier
+
+# Ignore claude and docs
+.claude/
+docs/
+CLAUDE.md
+

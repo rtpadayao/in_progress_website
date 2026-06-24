@@ -1,0 +1,8 @@
+<nav class="project-sidebar">
+  <h2>Projects</h2>
+  <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</nav>

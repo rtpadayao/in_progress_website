@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="posts-container">
+  <aside class="sidebar">
+    {{ partial "blog-sidebar.html" . }}
+  </aside>
+  <section class="main-content">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="content">
+      {{ .Content }}
+    </div>
+    {{ end }}
+    {{ $pages := .Pages }}
+    {{ if .Paginator }}
+      {{ $pages = .Paginator.Pages }}
+    {{ end }}
+    {{ if $pages }}
+    <ul class="post-list">
+      {{ range $pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <div class="meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>
+        {{ if .Summary }}
+        <p class="excerpt">{{ .Summary }}</p>
+        {{ else }}
+        <p class="excerpt">{{ .Plain | truncate 160 }}</p>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+    {{ if .Paginator }}
+    <div class="pagination">
+      {{ if .Paginator.HasPrev }}
+      <a href="{{ .Paginator.Prev.URL }}">&laquo; Previous</a>
+      {{ end }}
+      <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+      {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL }}">Next &raquo;</a>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+  </section>
+</div>
+{{ end }}

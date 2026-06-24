@@ -1,0 +1,35 @@
+baseURL = "https://rtpadayao.com/"
+locale = "en-us"
+title = "Roy Padayao | Data Analyst Portfolio"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[params]
+  description = "Roy Padayao's Data Analyst Portfolio showcasing skills in SQL, Excel, Python, and Power BI."
+  linkedin = "https://www.linkedin.com/in/roytp/"
+  github = "https://github.com/rtpadayao"
+  twitter = ""
+  mastodon = ""
