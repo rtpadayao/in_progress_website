@@ -1,0 +1,14 @@
+<div class="page-meta">
+  {{ $show := default .Site.Params.showPageDates .Params.showPageDates }}
+  {{ if $show }}
+    {{ $format := partial "func/date-format.html" . }}
+    {{ $datestr := time.Format $format .Date }}
+    {{ $lastmodstr := time.Format $format .Lastmod }}
+    {{ if ne $datestr $lastmodstr }}
+      {{ $lastmodstr | i18n "lastModified"  }}
+    {{ else }}
+      {{ $datestr }}
+    {{ end }}
+  {{ end }}
+</div>
+

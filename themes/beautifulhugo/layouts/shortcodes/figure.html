@@ -1,0 +1,5 @@
+{{- if .Site.Params.disableFigureOverride }}
+  {{ partial "shortcodes/figure.html" . }}
+{{- else }}
+  {{ partial "shortcodes/beautifulfigure.html" . }}
+{{- end }}

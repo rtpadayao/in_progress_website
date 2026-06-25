@@ -1,0 +1,206 @@
+# Content
+- id: dateFormat
+  translation: ":date_long"
+- id: shortdateFormat
+  translation: ":date_medium"
+- id: postedOnDate
+  translation: "{{ . }} tarihinde paylaşıldı"
+- id: lastModified
+  translation: "{{ . }} tarihinde güncellendi"
+- id: translationsLabel
+  translation: "Diğer diller: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "Daha fazla oku"
+- id: olderPosts
+  translation: "Önceki gönderiler"
+- id: newerPosts
+  translation: "Son gönderiler"
+- id: previousPost
+  translation: "Önceki gönderi"
+- id: nextPost
+  translation: "Sonraki gönderi"
+- id: readTime
+  translation: "dakika"
+- id: words
+  translation: "kelime"
+- id: readingTime
+  translation: ""
+
+# 404 page
+- id: pageNotFound
+  translation: "Ups, bu sayfa mevcut değil. Başka bir yöne ilerleyin. (404 hatası)"
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Version }}</a> altyapısı &nbsp;&bull;&nbsp; <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> temasından uyarlanan <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> teması kullanılmaktadır.'
+
+# Navigation
+- id: toggleNavigation
+  translation: "Gezinmeyi aktifleştirin"
+- id: languageSwitcherLabel
+  translation: "Dil"
+- id: searchToggleLabel
+  translation: "Arama"
+- id: searchCloseLabel
+  translation: "Aramayı kapat"
+- id: searchPlaceholder
+  translation: "Yazı ve sayfalarda ara…"
+- id: searchResultsLabel
+  translation: "Arama sonuçları"
+- id: searchLoadingText
+  translation: "Aranıyor…"
+- id: searchNoResultsText
+  translation: "Sonuç bulunamadı: "
+- id: searchResultSingular
+  translation: "sonuç için "
+- id: searchResultPlural
+  translation: "sonuç için "
+- id: searchErrorIndexLoad
+  translation: "Arama indeksi yüklenirken hata oluştu."
+- id: searchErrorIndexLoading
+  translation: "Arama indeksi hâlâ yükleniyor."
+- id: searchPrevText
+  translation: "Önceki"
+- id: searchNextText
+  translation: "Sonraki"
+- id: searchUntitledText
+  translation: "Başlıksız"
+- id: searchDisabledText
+  translation: "Arama devre dışı."
+- id: gcseLabelShort
+  translation: "Arama"
+- id: gcseLabelLong
+  translation: "{{ .Site.Title }} içinde arayın"
+- id: gcseClose
+  translation: "Kapat"
+
+# Staticman
+- id: noComment
+  translation: "Yorum yok"
+- id: oneComment
+  translation: "yorum"
+- id: moreComment
+  translation: "yorumlar"
+- id: useMarkdown
+  translation: "Markdown söz dizimini kullanabilirsiniz"
+- id: yourName
+  translation: "İsminiz"
+- id: yourEmail
+  translation: "E-posta adresiniz"
+- id: yourWebsite
+  translation: "Web siteniz"
+- id: submit
+  translation: "Gönder"
+- id: close
+  translation: "Kapat"
+
+# Delayed Disqus
+- id: show
+  translation: "Göster"
+- id: comments
+  translation: "yorumlar" 
+
+# Theme toggle
+- id: themeToggleLabel
+  translation: "Tema"
+- id: themeTooltipAuto
+  translation: "Otomatik (sistemi takip eder)"
+- id: themeTooltipLight
+  translation: "Açık mod"
+- id: themeTooltipDark
+  translation: "Koyu mod"
+
+# Related posts
+- id: seeAlso
+  translation: "Ayrıca bakınız"
+
+# Archive
+- id: all
+  translation: "Tümü"
+- id: archiveYearFilter
+  translation: "Yıla göre filtrele"
+
+# Categories
+- id: categoriesLabel
+  translation: "Kategoriler: "
+
+# View source
+- id: viewSource
+  translation: "Kaynağı görüntüle"
+# Menu items / Menü öğeleri
+- id: menu_setup
+  translation: "Kurulum"
+- id: menu_configuration
+  translation: "Yapılandırma"
+- id: menu_layout-options
+  translation: "Düzen seçenekleri"
+- id: menu_theming
+  translation: "Temalar"
+- id: menu_seo-and-i18n
+  translation: "SEO ve i18n"
+- id: menu_comments-and-social
+  translation: "Yorumlar ve sosyal"
+- id: menu_features
+  translation: "Özellikler"
+- id: menu_pages-and-layouts
+  translation: "Sayfalar ve düzenler"
+- id: menu_shortcodes
+  translation: "Kısa kodlar"
+- id: menu_code-blocks
+  translation: "Kod blokları"
+- id: menu_markdown-extensions
+  translation: "Markdown uzantıları"
+- id: menu_figures-and-galleries
+  translation: "Şekiller ve galeriler"
+- id: menu_math-and-diagrams
+  translation: "Matematik ve diyagramlar"
+- id: menu_blog
+  translation: "Blog"
+- id: menu_post
+  translation: "Yazılar"
+- id: menu_tags
+  translation: "Etiketler"
+- id: menu_categories
+  translation: "Kategoriler"
+- id: menu_archives
+  translation: "Arşiv"
+- id: menu_about
+  translation: "Hakkında"
+
+# Recipe / Tarif
+- id: recipePrepTime
+  translation: "Hazırlık süresi"
+- id: recipeCookTime
+  translation: "Pişirme süresi"
+- id: recipeTotalTime
+  translation: "Toplam süre"
+- id: recipeYield
+  translation: "Porsiyon"
+- id: recipeCategory
+  translation: "Kategori"
+- id: recipeCuisine
+  translation: "Mutfak"
+- id: recipeCalories
+  translation: "Kalori"
+- id: recipeIngredients
+  translation: "Malzemeler"
+- id: recipeInstructions
+  translation: "Talimatlar"
+- id: recipeDay
+  translation:
+    one: "{{ .Count }} gün"
+    other: "{{ .Count }} gün"
+- id: recipeHour
+  translation:
+    one: "{{ .Count }} saat"
+    other: "{{ .Count }} saat"
+- id: recipeMinute
+  translation:
+    one: "{{ .Count }} dakika"
+    other: "{{ .Count }} dakika"
+- id: recipeSecond
+  translation:
+    one: "{{ .Count }} saniye"
+    other: "{{ .Count }} saniye"

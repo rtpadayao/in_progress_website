@@ -1,0 +1,85 @@
+{{- $title := "" }}
+{{- $subtitle := "" }}
+{{- $bigimg := slice }}
+{{- $headerImgStyle := "big" }}
+{{- $contentColClass := cond .Params.fullWidth "col-12" "col-md-10 offset-md-1" }}
+{{- $mainSections := default (slice "post" "posts") site.Params.mainSections }}
+{{- $isMainContent := in $mainSections .Type }}
+{{ if .IsHome }}
+  {{- $title = .Site.Params.homeTitle | default .Site.Title }}
+  {{- $subtitle = .Site.Params.subtitle }}
+  {{- $bigimg = .Site.Params.bigimg }}
+  {{- $headerImgStyle = .Site.Params.headerImgStyle | default "big" }}
+{{ else }}
+  {{- $title = .Title }}
+  {{- $subtitle = .Params.subtitle }}
+  {{- $bigimg = .Params.bigimg }}
+  {{- $headerImgStyle = .Params.headerImgStyle | default "big" }}
+{{ end }}
+
+{{ if or $bigimg $title }}
+  {{ if $bigimg }}
+    <div id="header-big-imgs" data-num-img={{len $bigimg}}
+      {{range $i, $img := $bigimg}}
+         data-img-src-{{add $i 1}}="{{ strings.TrimPrefix "/" $img.src | relURL }}"
+         {{ if $img.desc}}data-img-desc-{{add $i 1}}="{{$img.desc}}"{{end}}
+         {{ if $img.position}}data-img-position-{{add $i 1}}="{{$img.position}}"{{end}}
+      {{end}}></div>
+  {{ end }}
+
+  <header class="header-section {{ if $bigimg }}has-img{{ end }}">
+    {{ if $bigimg }}
+      {{- $firstimg := index $bigimg 0 }}
+    <div class="intro-header big-img{{ if eq $headerImgStyle "narrow" }} narrow-img{{ end }}" style="background-image: url('{{ strings.TrimPrefix "/" $firstimg.src | relURL }}');">
+        <div class="container">
+          <div class="row">
+            <div class="{{$contentColClass}}">
+              <div class="{{ .Type }}-heading">
+                <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+                {{ if not $isMainContent }}
+                  <hr class="small">
+                {{ end }}
+                {{ partial "header-subtitle.html" (dict "Context" . "Subtitle" $subtitle) }}
+                {{ if $isMainContent }}
+                  {{ partial "post_meta.html" . }}
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: {{ cond (isset $firstimg "desc") "inline" "none"}};">{{$firstimg.desc}}</span>
+      </div>
+    {{end}}
+    {{ if $title }}
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="{{$contentColClass}}">
+            <div class="{{ .Type }}-heading">
+              {{ if $bigimg }}
+              <span class="h1">{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</span>
+              {{ else }}
+              {{ if eq .Type "list" }}
+                <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+              {{ else }}
+                <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+              {{ end }}
+              {{ end }}
+              {{ if not $isMainContent }}
+                <hr class="small">
+              {{ end }}
+              {{ partial "header-subtitle.html" (dict "Context" . "Subtitle" $subtitle) }}
+              {{ if $isMainContent }}
+                {{ partial "post_meta.html" . }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+    {{ partial "header_custom.html" . }}
+  </header>
+{{ else }}
+  <div class="intro-header"></div>
+{{ end }}
