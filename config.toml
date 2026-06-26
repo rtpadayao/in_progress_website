@@ -1,4 +1,4 @@
-baseURL = "https://rtpadayao.com/"
+baseURL = "https://rtpadayao.netlify.app/"
 languageCode = "en-us"
 title = "Roy Padayao | Data Analyst Portfolio"
 theme = "papermod"
