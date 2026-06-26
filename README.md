@@ -50,7 +50,7 @@ archetypes/         # New-content templates
 
 ## Deployment
 
-**Production:** https://rtpadayao.com/ — auto-deploys on push to `main` via Netlify.
+**Production:** https://rtpadayao.netlify.app/ — auto-deploys on push to `main` via Netlify.
 
 ## About This Site
 
