@@ -1,35 +1,84 @@
 baseURL = "https://rtpadayao.com/"
-locale = "en-us"
+languageCode = "en-us"
 title = "Roy Padayao | Data Analyst Portfolio"
+theme = "papermod"
 
 [markup.goldmark.renderer]
   unsafe = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
-    weight = 1
+    weight = 20
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    url = "/blog/"
-    weight = 2
+    url = "/posts/"
+    weight = 30
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 40
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 50
 
 [params]
-  description = "Roy Padayao's Data Analyst Portfolio showcasing skills in SQL, Excel, Python, and Power BI."
-  linkedin = "https://www.linkedin.com/in/roytp/"
-  github = "https://github.com/rtpadayao"
-  twitter = ""
-  mastodon = ""
+  description = "Roy Padayao — Data Analyst & Data Engineer. PostgreSQL, DBT, Airflow, FastAPI, Power BI, Python, SQL. Based in the Philippines, open to remote roles."
+  author = "Roy Padayao"
+  keywords = ["data analyst", "data engineer", "Power BI", "PostgreSQL", "Airflow", "DBT", "FastAPI", "Python", "SQL", "accounting", "remote", "Philippines"]
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto"
+  ShowShareButtons = false
+  ShowReadingTime = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowWordCount = true
+  mainSections = ["posts"]
+
+  [params.profileMode]
+    enabled = true
+    title = "Roy Padayao"
+    subtitle = "Data Analyst & Data Engineer — SQL · Python · DBT · Airflow · Excel · Power BI"
+    imageUrl = "images/profile.png"
+    imageWidth = 150
+    imageHeight = 150
+    imageTitle = "Roy Padayao"
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Roy Padayao 👋"
+    AlignSocialIconsTo = "left"
+    Content = """Data Analyst & Data Engineer turning messy financial and operational data into reliable analytics products. I build end-to-end pipelines — from raw CSV/Excel/PDF sources through PostgreSQL and DBT, orchestrated by Airflow, served via FastAPI, surfaced in Power BI dashboards that drive decisions.
+
+**What I do:**
+- **Data Engineering** — PostgreSQL · Python · DBT · Airflow · FastAPI
+- **Analytics & Visualization** — Power BI (DAX) · Excel (Power Query/Pivot)
+- **Domain Expertise** — GL · AP/AR · Reconciliations · Budgeting · Forecasting
+
+Based in the Philippines, open to remote roles worldwide."""
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/roytp/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rtpadayao"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:padayao.roy@gmail.com"

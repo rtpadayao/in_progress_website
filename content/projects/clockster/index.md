@@ -1,8 +1,17 @@
 ---
 title: "Clockster Attendance Discipline Analysis"
 date: 2026-06-23
+description: "Shift-based discipline scoring model with weekday and monthly behavioral insights."
 summary: "Shift-based discipline scoring model with weekday and monthly behavioral insights."
-image: /content/projects/clockster/Clockster_Dashboard_Preview.png
+cover:
+  image: "Clockster_Dashboard_Preview.png"
+  alt: "Clockster Dashboard Preview"
+  caption: "Clockster Attendance Discipline Dashboard"
+tags:
+  - postgresql
+  - power-bi
+  - excel
+  - dax
 tools:
   - PostgreSQL
   - Power BI
@@ -19,14 +28,4 @@ downloads:
 
 ## Project Summary
 
-This project builds a shift-based attendance scoring model and identifies discipline trends
-across employees, departments, weekdays, and months.
-
-## Tools Used
-
-PostgreSQL • Power BI • DAX • Excel • Power Query • Power Pivot
-
-## Downloads
-
-- [Presentation PDF](datasets/ClocksterPresentation.pdf)
-- [Process Documentation](datasets/Clockster_Work_Documentation.pdf)
+This project builds a shift-based attendance scoring model and identifies discipline trends across employees, departments, weekdays, and months. I built a Postgres database, developed a schema for employee shift discipline data, and produced weekday and monthly behavioral insights.

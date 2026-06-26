@@ -1,10 +1,21 @@
 ---
 title: "Financial Statement Modeling and Analysis"
 date: 2026-06-23
+description: "Automated FP&A reporting pipeline with variance analysis and KPI insights."
 summary: "Automated FP&A reporting pipeline with variance analysis and KPI insights."
-image: /content/projects/financial-statement-analysis/FS_Overview.png
+cover:
+  image: "FS_Overview.png"
+  alt: "Financial Statement Analysis Dashboard"
+  caption: "Financial Statement Modeling Dashboard"
+tags:
+  - postgresql
+  - dbt
+  - airflow
+  - power-bi
+  - sql
 tools:
   - PostgreSQL
+  - Python
   - DBT
   - Airflow
   - Power BI
@@ -20,15 +31,4 @@ downloads:
 
 ## Project Summary
 
-This project demonstrates end-to-end financial reporting automation. ERP debit/credit data
-is ingested into Postgres, transformed with dbt, and visualized in Power BI.
-The workflow reduces manual reporting cycles and enables real-time variance tracking.
-
-## Tools Used
-
-PostgreSQL • DBT • Airflow • Power BI • DAX • SQL • Excel
-
-## Downloads
-
-- [PBI Dashboard PDF](datasets/Financial Statement Analysis Dashboard.pdf)
-- [Process Documentation](datasets/Financial_Workflow_Documentation.pdf)
+This project demonstrates end-to-end financial reporting automation. ERP debit/credit data is ingested into Postgres, transformed with dbt, and visualized in Power BI. The workflow reduces manual reporting cycles and enables real-time variance tracking.

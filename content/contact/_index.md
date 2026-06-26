@@ -1,9 +1,8 @@
 ---
 title: "Contact"
+description: "Get in touch with Roy Padayao for data analysis inquiries."
 ---
 
 Find me on ...
 
-- [LinkedIn](https://www.linkedin.com/in/roytp/)
-- [GitHub](https://github.com/rtpadayao)
-- [Email](mailto:padayao.roy@gmail.com?subject=Portfolio%20Inquiry)
+{{< social >}}

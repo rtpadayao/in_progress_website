@@ -1,0 +1,90 @@
+/* Project tools list */
+.project-tools {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-tools h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tools-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tools-list li {
+  background: var(--tertiary);
+  color: var(--primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Project downloads */
+.project-downloads {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-downloads h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.downloads-list {
+  list-style: none;
+  padding: 0;
+}
+
+.downloads-list li {
+  margin-bottom: 0.5rem;
+}
+
+.downloads-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.downloads-list a:hover {
+  border-color: var(--secondary);
+}
+
+.downloads-list a::before {
+  content: "↓";
+  font-size: 0.9rem;
+}
+
+/* Tool tags on list page */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tool-tag {
+  background: var(--tertiary);
+  color: var(--secondary);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* Home info section spacing */
+.home-info .entry-content {
+  margin-bottom: 1.5rem;
+}
